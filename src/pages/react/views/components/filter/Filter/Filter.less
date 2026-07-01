@@ -1,0 +1,30 @@
+.filter {
+  overflow: hidden;
+}
+
+.filter-item,
+.filter-item--last {
+  float: left;
+  min-width: 20%;
+  height: 52px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.filter-item--last {
+  flex-direction: row-reverse;
+}
+
+.filter-label {
+  flex-shrink: 0;
+  color: #000;
+  font-size: 14px;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.filter-component {
+  flex-grow: 1;
+}

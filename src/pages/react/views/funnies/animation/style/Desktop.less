@@ -1,0 +1,95 @@
+.animation button {
+  border: none;
+  outline: none;
+  padding: 4px 10px;
+  margin-right: 10px;
+  background-color: #77c111;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+
+.animation-fade-enter {
+  opacity: 0.01;
+}
+
+.animation-fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+
+.animation-fade-exit {
+  opacity: 1;
+}
+
+.animation-fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in-out;
+}
+
+
+
+.animation-slide-enter {
+  transform: translateY(-100%);
+}
+
+.animation-slide-enter-active {
+  transform: translateY(0);
+  transition: transform 300ms ease-in-out;
+}
+
+.animation-slide-exit {
+  transform: translateY(0);
+}
+
+.animation-slide-exit-active {
+  transform: translateY(-100%);
+  transition: transform 300ms ease-in-out;
+}
+
+
+
+.animation-left-enter {
+  transform: translateX(26px);
+}
+.animation-left-enter-active {
+  transform: translateX(0);
+  transition: transform 3000ms ease-in-out;
+}
+
+.animation-left-exit {
+  transform: translateX(0);
+}
+.animation-left-exit-active {
+  transform: translateX(-26px);
+  transition: transform 3000ms ease-in-out;
+}
+
+
+
+.animation-right-enter {
+  margin-left: -10px;
+}
+
+.animation-right-enter-active {
+  margin-left: 0;
+  transition: margin-left 500ms ease-in-out;
+}
+
+.animation-right-exit {
+  margin-left: 0;
+}
+
+.animation-right-exit-active {
+  margin-left: 10px;
+  transition: margin-left 500ms ease-in-out;
+}

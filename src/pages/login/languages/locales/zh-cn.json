@@ -1,0 +1,10 @@
+{
+  "login.onSpecial": "开启特效",
+  "login.offSpecial": "关闭特效",
+  "login.title": "Login to Laboratory",
+  "login.username": "请输入账号",
+  "login.username-empty": "账号不能为空",
+  "login.password": "请输入密码",
+  "login.password-empty": "密码不能为空",
+  "login.loginText": "登录"
+}

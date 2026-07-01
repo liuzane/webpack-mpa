@@ -1,0 +1,45 @@
+.screen-loading {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 10000;
+  opacity: 1;
+  transition: opacity .5s ease-in-out;
+}
+
+.screen-loading__viewbox {
+  width: 20vw;
+  height: 20vh;
+  position: absolute;
+  top: calc(40% - 10vh);
+  left: calc(50% - 10vw);
+}
+
+.screen-loading__text {
+  color: #454545;
+  font-family: 'Microsoft YaHei UI','Microsoft YaHei',DengXian,SimSun,'Segoe UI',Tahoma,Helvetica,sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  text-align: center;
+}
+
+.screen-loading-fade-enter {
+  opacity: 0.01;
+}
+
+.screen-loading-fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+
+.screen-loading-fade-exit {
+  opacity: 1;
+}
+
+.screen-loading-fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in-out;
+}

@@ -1,0 +1,90 @@
+html body, 
+html h1, 
+html h2, 
+html h3, 
+html h4, 
+html h5, 
+html h6, 
+html hr, 
+html p, 
+html blockquote, 
+html dl, 
+html dt, 
+html dd, 
+html ul, 
+html ol, 
+html li, 
+html pre, 
+html form, 
+html fieldset, 
+html legend, 
+html button, 
+html input, 
+html textarea, 
+html th, 
+html td {
+  margin: 0;
+  padding: 0;
+}
+
+body, button, input, select, textarea {
+  font: 14px/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+address, cite, dfn, em, var {
+  font-style: normal;
+}
+
+code, kbd, pre, samp {
+  font-family: couriernew, courier, monospace;
+}
+
+small {
+  font-size: 12px;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  outline: 0 none;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: 0 none;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+legend {
+  color: #000;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+button, input, select, textarea {
+  font-size: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  vertical-align: middle;
+}

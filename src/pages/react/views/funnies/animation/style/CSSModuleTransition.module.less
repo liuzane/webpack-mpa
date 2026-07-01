@@ -1,0 +1,27 @@
+@animation-attr: height;
+@enter-value: 150px;
+@exit-value: 150px;
+@transition: @{animation-attr} 300ms ease-in-out;
+
+
+.animation-spread-enter {
+  @{animation-attr}: @exit-value;
+}
+
+.animation-spread-enter-active {
+  @{animation-attr}: @enter-value;
+  transition: @animation-attr 300ms ease-in-out;
+}
+
+.animation-spread-exit {
+  @{animation-attr}: @enter-value;
+}
+
+.animation-spread-exit-active {
+  @{animation-attr}: @exit-value;
+  transition: @animation-attr 300ms ease-in-out;
+}
+
+:global {
+  
+}

@@ -1,0 +1,21 @@
+.container {
+  overflow: hidden;
+
+  & > div {
+    float: left;
+    width: 25%;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+  }
+}
+
+.box {
+  background-color: #FF7800;
+}
+
+:global {
+  .box-global {
+    background-color: #77c111;
+  }
+}

@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.calendar__container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.calendar__title,
+.calendar__item {
+  padding: 5px 0;
+  text-align: center;
+}
+
+.calendar__title {
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.calendar__item {
+  & > span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 25px;
+  }
+
+  & > .prev-month {
+    color: #c0c4cc;
+  }
+
+  & > .current-week {
+    color: red;
+  }
+}

@@ -1,0 +1,29 @@
+.highlight {
+  margin: 0;
+  border: 1px solid #e1e1e1;
+  border-radius: 2px;
+  line-height: 1.1em;
+  background-color: #f8f8f8;
+  position: relative;
+  font-size: 12px;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"!important;
+}
+
+.highlight-language {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #ccc;
+  text-align: right;
+  font-size: .75em;
+  padding: 5px 10px 0;
+  line-height: 15px;
+  height: 15px;
+  font-weight: 100;
+}
+
+.highlight-code {
+  padding: 1em;
+  line-height: 1.5em;
+  margin: 0;
+}

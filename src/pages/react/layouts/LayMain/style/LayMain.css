@@ -1,0 +1,95 @@
+/* PC端 */
+.layout {
+	height: 100%;
+  background-color: #f0f2f5;
+  overflow: hidden;
+}
+
+.layout-header {
+  height: 64px;
+  background-color: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, .2);
+  padding: 0 8px;
+}
+
+.layout-sider {
+  float: left;
+  width: 200px;
+  height: 100%;
+  background-color: #001529;
+}
+
+.layout-sider__top {
+  height: 64px;
+}
+
+.layout-sider__logo {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 50%;
+  vertical-align: top;
+  transform: translateY(-50%) ;
+  animation: layout-logo-spin infinite 20s linear;
+}
+
+.layout-sider__name {
+  display: inline-block;
+  height: 32px;
+  padding: 0 10px;
+  background-color: #334454;
+  color: rgba(255, 255, 255, .8);
+  font-size: 16px;
+  line-height: 32px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.layout-section {
+  height: calc(100% - 64px);
+  position: relative;
+  overflow: auto;
+}
+
+.layout-scrolling {
+  height: calc(100% - 16px);
+  background-color: #fff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .2);
+  margin: 8px;
+  overflow: auto;
+}
+
+.layout-content {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100%;
+  padding: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.layout-container {
+  height: calc(100% - 16px);
+  margin: 8px;
+}
+
+.layout-block {
+  background-color: #fff;
+  margin: 8px 0;
+  padding: 8px;
+}
+
+.layout--no-padding {
+  padding: 0;
+}
+
+@keyframes layout-logo-spin {
+  from {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
