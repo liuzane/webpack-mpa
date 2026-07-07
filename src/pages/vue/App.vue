@@ -180,10 +180,9 @@
         menuSelectedKeys: [],
         menuOpenKeys: [],
         dropdownMenus: [
-          { title: 'app.dropdown.my-center', icon: 'user' },
-          { title: 'app.dropdown.change-password', icon: 'password' },
+          { title: 'page.header.change-password', icon: 'password' },
           { divider: true },
-          { title: 'app.dropdown.logout', icon: 'logout', click: this.handleLogout },
+          { title: 'page.header.logout', icon: 'logout', click: this.handleLogout },
         ],
       };
     },
@@ -231,10 +230,11 @@
 
       handleLogout() {
         Modal.confirm({
-          title: 'app.logout.title?',
+          title: this.$getText('page.header.logout.title'),
+          content: this.$getText('page.header.logout.content'),
           icon: h(ExclamationCircleOutlined),
-          okText: 'global.okText',
-          cancelText: 'global.cancelText',
+          okText: this.$getText('global.okText'),
+          cancelText: this.$getText('global.cancelText'),
           onOk() {
             console.log('OK');
           },

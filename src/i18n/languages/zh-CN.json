@@ -4,8 +4,8 @@
 
   "page.header.title": "立即开始一场神奇的旅行吧！",
   "page.header.welcome": "欢迎，",
-  "page.header.personalInfo": "个人信息",
-  "page.header.changePassword": "修改密码",
+  "page.header.personal-info": "个人信息",
+  "page.header.change-password": "修改密码",
   "page.header.logout": "注销",
   "page.header.logout.title": "退出确认",
   "page.header.logout.content": "您是否要退出系统？",

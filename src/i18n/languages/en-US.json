@@ -4,8 +4,8 @@
 
   "page.header.title": "Start a magical journey right now!",
   "page.header.welcome": "Welcome, ",
-  "page.header.personalInfo": "Personal",
-  "page.header.changePassword": "Password",
+  "page.header.personal-info": "Personal",
+  "page.header.change-password": "Password",
   "page.header.logout": "Log out",
   "page.header.logout.title": "Log Out Comfirm",
   "page.header.logout.content": "Do you want to exit the system?",

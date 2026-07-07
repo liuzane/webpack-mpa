@@ -89,12 +89,12 @@ class AppHeader extends PureComponent {
       <Menu onClick={ this.handleUser }>
         <Menu.Item key="userInfo">
           <UserOutlined className="app__menu-icon" />
-          {getText('page.header.personalInfo')}
+          {getText('page.header.personal-info')}
         </Menu.Item>
 
         <Menu.Item key="password">
           <UnlockOutlined className="app__menu-icon" />
-          {getText('page.header.changePassword')}
+          {getText('page.header.change-password')}
         </Menu.Item>
 
         <Menu.Divider />
