@@ -6,45 +6,44 @@ export default class I18n {
   static languageList = [
     {
       name: 'English',
-      code: 'en-US',
+      code: 'en',
     },
   
     {
       name: '简体中文',
-      code: 'zh-CN',
+      code: 'zh',
     }
   ];
   static messages = null;
 
   constructor(language) {
-    let lang = language || getStorage('language') || window.navigator.language;
-    
-    if (!this.verifyLanguageName(lang)) {
-      switch (lang) {
-        case 'zh':
-          lang = 'zh-CN';
-          break;
-
-        case 'en':
-          lang = 'en-US';
-          break;
-
-        default:
-          lang = 'en-US';
-          break;
-      }
-    }
+    const lang = this._getLanguage(language);
     this.loadMessages(lang);
     this.setLanguage(lang);
   }
 
   /**
-   * Verify the language name is correct.
+   * Get the language code.
    * @param {string} language
-   * @return {boolean>}
+   * @return {string}
    */
-  verifyLanguageName(language) {
-    return /[a-z]{2}-[A-Z]{2}/.test(language);
+  _getLanguage(language) {
+    let lang = language || getStorage('language') || window.navigator.language;
+    if (typeof lang !== 'string') {
+      return 'en';
+    }
+    lang = lang.split('-')[0];
+    
+    return lang;
+  }
+
+  /**
+   * Verify the language code.
+   * @param {string} language
+   * @return {boolean}
+   */
+  verifyLanguage(language) {
+    return this.getLanguageList().some(item => item.code === language);
   }
 
   /**
@@ -54,7 +53,7 @@ export default class I18n {
   loadMessages(language) {
     try {
       const messages = require(`./languages/${language}.json`);
-      I18n.prototype.setMessages(messages);
+      this.setMessages(messages);
     } catch (error) {
       console.error('Load the language json failed', error);
     }
@@ -97,7 +96,7 @@ export default class I18n {
    * @param {string} language
    */
   setLanguage(language) {
-    if (I18n.prototype.verifyLanguageName(language)) {
+    if (this.verifyLanguage(language)) {
       I18n.language = language;
       setStorage('language', language);
     }

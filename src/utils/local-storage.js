@@ -1,53 +1,51 @@
-/*
-* @method setStorage
-* @param { key: String, required } { data: Any, required } { hours: Number }
-* @return { Boolean }
-*/
-export function setStorage(key, data, hours) {
-  let expires;
+/**
+ * 从 localStorage 读取数据
+ * @param {string} key - 存储键名（必填）
+ * @returns {*} 解析后的数据，若键不存在或解析失败则返回原始字符串或 null
+ */
+export function getStorage(key) {
+  if (!key) {
+    console.error('[localStorage Error]: Key is required.');
+    return null;
+  }
 
-  if (!key || !data) {
-    console.error('[localStorage Error]: Key and Data is a must parameter');
+  const raw = localStorage.getItem(key);
+  if (raw === null) return null;
+
+  try {
+    return JSON.parse(raw);
+  } catch {
+    // 若存储的不是 JSON 格式，则直接返回原始字符串
+    return raw;
+  }
+}
+
+/**
+ * 存储数据到 localStorage
+ * @param {string} key - 存储键名（必填）
+ * @param {*} data - 要存储的数据（必填，若为 null 或 undefined 会报错）
+ * @returns {boolean} 存储是否成功
+ */
+export function setStorage(key, data) {
+  if (!key || data == null) {
+    console.error('[localStorage Error]: Key and data are required, and data cannot be null/undefined.');
     return false;
   }
 
-  expires = hours ? new Date().getTime() + 1000 * 60 * 60 * hours : new Date(0).getTime();
-  localStorage.setItem(key, JSON.stringify({ data, expires }));
-  
-  return true;
-}
-
-/*
-* @method getStorage
-* @param { key: String, required }
-* @return { Boolean | null }
-*/
-export function getStorage(key) {
-  let data, nowTime = new Date().getTime();
-
-  if (!key) console.error('[localStorage Error]: Key is a must parameter');
-
   try {
-    data = JSON.parse(localStorage.getItem(key));
+    localStorage.setItem(key, typeof data === 'string' ? data : JSON.stringify(data));
+    return true;
   } catch (error) {
-    return localStorage.getItem(key);
-  }
-
-  if (!data) return null;
-
-  if (!data.expires || data.expires >= nowTime) {
-    return data.data;
-  } else {
-    localStorage.removeItem(key);
-    return null;
+    console.error('[localStorage Error]: Failed to set item:', error);
+    return false;
   }
 }
 
-/*
-* @method clearStorage
-* @param { key: String, required }
-* @return null
-*/
+/**
+ * 清除 localStorage 数据
+ * @param {string} [key] - 可选，若提供则删除指定键，否则清空全部
+ * @returns {void}
+ */
 export function clearStorage(key) {
   if (key) {
     localStorage.removeItem(key);
