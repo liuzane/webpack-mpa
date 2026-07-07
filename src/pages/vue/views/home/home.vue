@@ -93,7 +93,6 @@ export default {
 /* Hero Section */
 .home__hero {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 80px 60px;
   min-height: 500px;
@@ -102,7 +101,7 @@ export default {
 }
 
 .home__hero-content {
-  flex: 1;
+  width: 500px;
   z-index: 10;
 }
 
@@ -158,13 +157,15 @@ export default {
 }
 
 .home__hero-visual {
-  flex: 1;
+  width: 500px;
   position: relative;
   height: 400px;
 }
 
 .home__floating-box {
   position: absolute;
+  top: 50%;
+  left: 50%;
   padding: 16px 24px;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
@@ -176,26 +177,26 @@ export default {
 }
 
 .home__floating-box--1 {
-  top: 50px;
-  left: 50px;
+  margin-top: -130px;
+  margin-left: -180px;
   animation-delay: 0s;
 }
 
 .home__floating-box--2 {
-  top: 100px;
-  right: 80px;
+  margin-top: 100px;
+  margin-left: -100px;
   animation-delay: 0.5s;
 }
 
 .home__floating-box--3 {
-  bottom: 100px;
-  left: 100px;
+  margin-top: -120px;
+  margin-left: 70px;
   animation-delay: 1s;
 }
 
 .home__floating-box--4 {
-  bottom: 100px;
-  right: 200px;
+  margin-top: -20px;
+  margin-left: -60px;
   animation-delay: 1.5s;
 }
 
