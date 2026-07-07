@@ -2,7 +2,6 @@
 const webpack = require('webpack');
 const { VueLoaderPlugin } = require('vue-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // Node 模块
@@ -38,11 +37,6 @@ const multiplePageConfig = [
     path: './src/pages/vue/main.js',
     title: 'Vue Laboratory',
     favicon: `${ processEnv.STATIC_URL }/vue-favicon.ico`,
-  },
-  {
-    entry: 'solar-system',
-    path: './src/pages/solar-system/main.js',
-    title: 'Solar System',
   },
 ];
 
@@ -229,8 +223,5 @@ module.exports = {
       filename: '[name].[hash:6].min.css',
       chunkFilename: '[name].[hash:6].min.css',
     }),
-
-    // 压缩css
-    new OptimizeCssAssetsPlugin(),
   ],
 };

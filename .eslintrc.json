@@ -91,6 +91,7 @@
     "no-multi-spaces": "error", // 禁止使用多个空格
     "no-redeclare": "error", // 禁止重复声明变量
     "no-case-declarations": "off", // 不允许在 case 子句中使用词法声明
+    "no-constant-condition": "off", // 禁止在条件表达式中使用常量值
 
 
     /* Variables 这些规则与变量声明有关 */

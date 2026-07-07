@@ -16,7 +16,7 @@
   "react-page.components.filter": "Filter",
   "react-page.components.rc-table": "RcTable",
   "react-page.components.validate": "Validate",
-  "react-page.funnies": "有趣",
+  "react-page.funnies": "好玩儿的",
   "react-page.funnies.animation": "动画",
   "react-page.funnies.floors": "滚动层",
   "react-page.funnies.svg": "Svg",
@@ -35,9 +35,11 @@
   "vue-page.library": "库",
   "vue-page.antd-ui": "Antd UI",
   "vue-page.element-ui": "Element UI",
-  "vue-page.vue-api": "Api",
-  "vue-page.setup": "Setup",
+  "vue-page.vue-api": "Vue API",
+  "vue-page.setup": "基础",
   "vue-page.funnies": "有趣",
   "vue-page.floors": "滚动层",
-  "vue-page.hello-world": "Hello World"
+  "vue-page.pixel-canvas": "像素画布",
+  "vue-page.fireworks": "烟花",
+  "vue-page.spin-wheel": "转盘"
 }

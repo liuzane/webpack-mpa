@@ -17,11 +17,25 @@ export default class I18n {
   static messages = null;
 
   constructor(language) {
-    const lang = language || getStorage('language') || window.navigator.language;
-    if (this.verifyLanguageName(lang)) {
-      this.loadMessages(lang);
-      this.setLanguage(lang);
+    let lang = language || getStorage('language') || window.navigator.language;
+    
+    if (!this.verifyLanguageName(lang)) {
+      switch (lang) {
+        case 'zh':
+          lang = 'zh-CN';
+          break;
+
+        case 'en':
+          lang = 'en-US';
+          break;
+
+        default:
+          lang = 'en-US';
+          break;
+      }
     }
+    this.loadMessages(lang);
+    this.setLanguage(lang);
   }
 
   /**

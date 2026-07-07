@@ -23,16 +23,9 @@ class Home extends PureComponent {
     return (
       <div className="home">
         <ul className="home-container">
-          <li className="home-block">
-            <Weather />
-          </li>
-          <li className="home-block">
-            <Lifestyle />
-          </li>
-          <li className="home-block">
-            <Calendar></Calendar>
-          </li>
-          <li className="home-block"></li>
+          <div className="home-calendar">
+            <Calendar />
+          </div>
         </ul>
       </div>
     );

@@ -7,7 +7,7 @@
     >
       <div class="app__logo">
         <!-- eslint-disable-next-line no-undef -->
-        <a :href="PUBLIC_URL">
+        <a href="">
           <img
             :class="{ 'app__logo-image': true, 'app__logo-image--center': collapsed }"
             src="./assets/logo.svg"

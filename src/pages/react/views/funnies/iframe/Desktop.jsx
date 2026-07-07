@@ -14,7 +14,7 @@ import './style/Desktop.less';
 class Desktop extends PureComponent {
   constructor() {
     super();
-    this.src = address.SERVER_ADDRESS + '/solar-system.html';
+    this.src = 'https://liuzane.github.io/solar-system';
   }
 
   render() {

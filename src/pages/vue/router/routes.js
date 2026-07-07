@@ -36,35 +36,15 @@ export default createRoutes([
 
       {
         path: 'antd-ui',
-        name: 'vue-page.antd-ui',
-        component: () => import('@-vue/views/ui/antd-ui'),
+        name: 'vue-page.library.antd-ui',
+        component: () => import('@-vue/views/library/antd-ui'),
       },
 
       {
-        path: 'element-ui',
-        name: 'vue-page.element-ui',
-        component: () => import('@-vue/views/ui/element-ui'),
-      },
-    ],
-  },
-
-  {
-    path: '/vue-api',
-    name: 'vue-page.vue-api',
-    icon: 'api',
-    component: Container,
-    children: [
-      {
-        path: '',
-        redirect: 'setup',
-        hidden: true,
-      },
-
-      {
-        path: 'setup',
-        name: 'vue-page.setup',
-        component: () => import('@-vue/views/vue-api/setup'),
-      },
+        path: 'lodash',
+        name: 'vue-page.library.lodash',
+        component: () => import('@-vue/views/library/lodash'),
+      }
     ],
   },
 
@@ -76,20 +56,20 @@ export default createRoutes([
     children: [
       {
         path: '',
-        redirect: 'floors',
+        redirect: 'fireworks',
         hidden: true,
       },
 
       {
-        path: 'floors',
-        name: 'vue-page.floors',
-        component: () => import('@-vue/views/funnies/floors'),
+        path: 'fireworks',
+        name: 'vue-page.funnies.fireworks',
+        component: () => import('@-vue/views/funnies/fireworks'),
       },
 
       {
-        path: 'hello-world',
-        name: 'vue-page.hello-world',
-        component: () => import('@-vue/components/HelloWorld.vue'),
+        path: 'spin-wheel',
+        name: 'vue-page.funnies.spin-wheel',
+        component: () => import('@-vue/views/funnies/spin-wheel'),
       },
     ],
   },
