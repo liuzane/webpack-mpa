@@ -36,8 +36,6 @@
   "vue-page.library.antd-ui": "Antd UI",
   "vue-page.library.lodash": "Lodash",
   "vue-page.funnies": "Funnies",
-  "vue-page.funnies.floors": "Floors",
-  "vue-page.funnies.pixel-canvas": "Pixel Canvas",
   "vue-page.funnies.fireworks": "Fireworks",
   "vue-page.funnies.spin-wheel": "Spin Wheel"
 }

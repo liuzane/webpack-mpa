@@ -33,13 +33,9 @@
 
   "vue-page.home": "首页",
   "vue-page.library": "库",
-  "vue-page.antd-ui": "Antd UI",
-  "vue-page.element-ui": "Element UI",
-  "vue-page.vue-api": "Vue API",
-  "vue-page.setup": "基础",
-  "vue-page.funnies": "有趣",
-  "vue-page.floors": "滚动层",
-  "vue-page.pixel-canvas": "像素画布",
-  "vue-page.fireworks": "烟花",
-  "vue-page.spin-wheel": "转盘"
+  "vue-page.library.antd-ui": "Antd UI",
+  "vue-page.library.lodash": "Lodash",
+  "vue-page.funnies": "好玩儿的",
+  "vue-page.funnies.fireworks": "粒子烟花",
+  "vue-page.funnies.spin-wheel": "决策转盘"
 }

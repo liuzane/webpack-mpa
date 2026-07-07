@@ -77,7 +77,11 @@
             </li>
             <template #overlay>
               <ant-menu>
-                <ant-menu-item v-for="(item, index) in $getLanguageList()" :key="index">{{ item.name }}</ant-menu-item>
+                <ant-menu-item
+                  v-for="(item, index) in $getLanguageList()"
+                  :key="index"
+                  @click="handleLanguageChange(item)"
+                >{{ item.name }}</ant-menu-item>
               </ant-menu>
             </template>
           </ant-dropdown>
@@ -239,6 +243,11 @@
           },
           class: 'test',
         });
+      },
+
+      handleLanguageChange(item) {
+        this.$setLanguage(item.code);
+        window.location.reload();
       }
     },
   }
