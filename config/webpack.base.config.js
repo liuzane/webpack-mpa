@@ -72,7 +72,7 @@ module.exports = {
       '@-react': path.resolve(__dirname, '../src/pages/react'),
       '@-vue': path.resolve(__dirname, '../src/pages/vue'),
 
-      'vue$': isDevEnv ? 'vue/dist/vue.esm-bundler.js' : 'vue/dist/vue.runtime.esm-bundler.js',
+      'vue$': 'vue/dist/vue.esm-bundler.js',
     },
   },
   module: {
