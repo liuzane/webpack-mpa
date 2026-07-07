@@ -183,21 +183,21 @@ const routes = [
       {
         path: 'less',
         title: 'react-page.others.less',
-        component: AsyncLoad(() => import('@-react/views/others/Less')),
+        component: AsyncLoad(() => import('@-react/views/others/less')),
         exact: true,
       },
 
       {
         path: 'module',
         title: 'react-page.others.module',
-        component: AsyncLoad(() => import('@-react/views/others/Module')),
+        component: AsyncLoad(() => import('@-react/views/others/module')),
         exact: true,
       },
 
       {
         path: 'grammar',
         title: 'react-page.others.grammar',
-        component: AsyncLoad(() => import('@-react/views/others/Grammar')),
+        component: AsyncLoad(() => import('@-react/views/others/grammar')),
         exact: true,
       },
     ],
